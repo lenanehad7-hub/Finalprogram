@@ -1,0 +1,258 @@
+/*اعدادات عامة للصفحة */
+*{margin: 0;
+  box-sizing: border-box;
+  font-family: 'helvetica'; 
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1;
+}
+
+/* شريط التنقل */
+.navbar {
+background-color: #003366;
+color: white; 
+display: flex; 
+justify-content: space-between;
+text-align: center; 
+padding: 1rem 2rem; 
+flex-wrap: wrap;
+}
+
+.navbar logo {
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  
+}
+
+.navbar ul  {
+  color: white; 
+  font-size: 1.5rem; 
+  gap: 1.25rem; 
+  list-style: none;
+  display: flex;
+
+}
+.navbar li {margin-left: 1rem;}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s; 
+
+}
+
+/*لما اضغط على البوكس يتغير لونه*/
+.navbar a:hover { 
+  color: #ffcc00; 
+  background-color: #003366;
+}
+  
+/* قسم البطل */
+.hero {
+  background: linear-gradient(to left , #1975B1, #003366);
+  color: #fff;
+  text-decoration: bold; 
+  text-align: center;
+  padding: 80px 20px ;
+}
+.p1{font-size: 0.9em;}
+
+.hero h1 { font-size: 40px;
+margin-bottom: 20px; }
+
+.hero button {
+  background-color: #ffcc00;
+  color: #003366;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1.5em; 
+}
+
+/*  قسم التخصصات */
+.departments {
+  padding: 4rem 5%;
+  text-align: center;
+  overflow: auto;
+font-weight: bold;
+align-content: space-between; 
+box-sizing: border-box; 
+
+  
+}
+
+.departments h2 {
+  color: #003366;
+  margin-bottom: 2.5rem;
+  font-size: 28px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.departments-grid {
+  display: grid;
+  gap: 1.9rem; 
+  
+}
+
+.department-card {
+  background: linear-gradient(to right , #D2F9FF24, #fff); 
+  border: 0.1rem solid #cccccc;
+  padding: 1.2rem;
+  border-radius: 0.90rem;
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر عمودياً */
+  justify-content: space-between; /* دفع الزر للأسفل */
+  box-shadow: 2px 4px 6px #94CAFF4A;
+  gap: 1rem; 
+  transition: transform 0.2s
+  
+}
+
+.department:hover {}
+
+.department-card:hover {
+ box-shadow: 5px 10px 20px #0000001A;
+}
+
+.department-card img {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+
+.department-card h3 {
+  color: #003366;
+  font-size: 1.1rem;
+  margin-bottom: 0.80rem;
+  font-family:'times','cairo';
+
+  
+}
+
+.department-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+  flex-grow: 1; 
+  font-family:'trebuchet ms','Amiri';
+}
+
+.department-card button {
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  padding: 0.625rem;
+  border-radius: 0.390rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.department-card button:hover {
+  background-color: #ffcc00;
+  color: #003366;
+}
+
+/*  (Responsive) */
+@media (max-width: 1200px) {
+  .departments-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .departments-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .departments-grid { grid-template-columns: 1fr; }
+}
+
+/*الخدمات  */
+.services { 
+  background-color: #e9f0f7; padding: 50px 5%; 
+  text-align: center;
+  
+} 
+ 
+
+.services-row { 
+  display: flex; 
+  flex-wrap: wrap;
+  align-content: center; 
+  gap: 1.9rem;
+  justify-content: center; 
+}
+
+
+
+
+.service-card { 
+  background: #fff;
+  padding: 1.5rem;
+flex: 1 1 6.25rem;
+border-radius: 6.25rem;
+margin: 1rem;
+box-shadow: 8px 4px 2px #ffd700;
+border: 1px solid #ffd700;
+}
+
+.contact-section {
+  padding: 50px 20px;
+  text-align: center; 
+  background-color: #FFFFFF;
+  
+}
+
+.contact-form { 
+max-width: 31.25rem; 
+margin: 0 auto; 
+display: flex;
+flex-direction: column;
+gap: 1.9rem; }
+
+.contact-form input, 
+.contact-form textarea { 
+ padding: 0.50rem; 
+ color: black; 
+border-radius: 0.5rem;
+font-size: 1rem; 
+font-family:'cairo',sans-serif;
+border: 1px solid #ccc;
+}
+
+.contact-form button {
+background-color: #003366;
+color: white;
+padding: 0.625rem; 
+border: none; 
+cursor: pointer; 
+border-radius: 0.300rem;
+transition: 0.3s;
+
+} 
+.contact-section button:hover{
+  background-color:#ffcc00;}
+  
+
+  
+footer { background: linear-gradient(to left , #1975B1, #003366);
+   color: white; 
+padding: 1rem; 
+text-align: center; 
+margin: 0rem; 
+}
+
+footer .social-icons a { color: #ffcc00; 
+text-decoration: none; }
+
+.by {
+  font-size: 0.7rem; 
+}
+
+
+
+
+
